@@ -1,0 +1,6 @@
+{
+  "name": "Luma Event Portal",
+  "description": "A beautiful Luma-style event platform powered by Supabase with live real-time comments, user profiles, RSVPs, and event hosting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
