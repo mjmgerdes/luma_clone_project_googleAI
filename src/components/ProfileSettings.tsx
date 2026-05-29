@@ -149,7 +149,7 @@ export default function ProfileSettings({ user, onRefreshProfile, onLogOut }: Pr
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <span className="absolute -bottom-1.5 -right-1.5 p-1 bg-indigo-600 text-white rounded-full text-xs">
+              <span className="absolute -bottom-1.5 -right-1.5 p-1 bg-blue-600 text-white rounded-full text-xs">
                 <Smile className="w-3.5 h-3.5" />
               </span>
             </div>
@@ -167,7 +167,7 @@ export default function ProfileSettings({ user, onRefreshProfile, onLogOut }: Pr
                     onClick={() => setAvatarUrl(url)}
                     className={`w-9 h-9 rounded-lg overflow-hidden bg-slate-50 border transition-all hover:scale-105 active:scale-95 flex items-center justify-center p-0.5 ${
                       avatarUrl === url 
-                        ? 'border-indigo-600 ring-2 ring-indigo-500/20' 
+                        ? 'border-blue-600 ring-2 ring-blue-500/20' 
                         : 'border-slate-200 dark:border-slate-800'
                     }`}
                   >
@@ -184,7 +184,7 @@ export default function ProfileSettings({ user, onRefreshProfile, onLogOut }: Pr
               placeholder="Or enter custom avatar image URL"
               value={avatarUrl}
               onChange={(e) => setAvatarUrl(e.target.value)}
-              className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+              className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               id="custom-avatar-url-input"
             />
           </div>
@@ -204,7 +204,7 @@ export default function ProfileSettings({ user, onRefreshProfile, onLogOut }: Pr
                 placeholder="Taylor Swift"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-indigo-100 focus:ring-1"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-blue-100 focus:ring-1"
                 id="profile-fullName-input"
               />
             </div>
@@ -222,7 +222,7 @@ export default function ProfileSettings({ user, onRefreshProfile, onLogOut }: Pr
                 placeholder="taylorswift"
                 value={username}
                 onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-indigo-100 focus:ring-1"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-blue-100 focus:ring-1"
                 id="profile-username-input"
               />
             </div>

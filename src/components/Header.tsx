@@ -61,11 +61,11 @@ export default function Header({
           className="flex items-center space-x-2 cursor-pointer active:scale-95 transition-all"
           id="header-brand-logo"
         >
-          <div className="p-2 bg-gradient-to-tr from-indigo-600 to-indigo-400 text-white rounded-xl shadow-md shadow-indigo-500/10">
+          <div className="p-2 bg-gradient-to-tr from-blue-600 to-blue-400 text-white rounded-xl shadow-md shadow-blue-500/10">
             <Sparkles className="w-4 h-4" />
           </div>
           <span className="font-display font-bold text-lg md:text-xl text-slate-900 dark:text-white tracking-tight">
-            My AI <span className="text-indigo-600 dark:text-indigo-400">Luma</span>
+            My AI <span className="text-blue-600 dark:text-blue-400">Luma</span>
           </span>
         </div>
 
@@ -82,7 +82,7 @@ export default function Header({
             id="theme-switch-btn"
             title="Toggle theme mode"
           >
-            {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-indigo-600" />}
+            {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-blue-600" />}
           </button>
         </div>
 
@@ -92,7 +92,7 @@ export default function Header({
             onClick={() => setTab('explore')}
             className={`px-4 py-1.5 rounded-xl text-xs font-semibold tracking-wide transition-all ${
               currentTab === 'explore'
-                ? 'bg-white dark:bg-slate-900 text-indigo-605 dark:text-indigo-400 shadow-sm border border-slate-100 dark:border-slate-85%'
+                ? 'bg-white dark:bg-slate-900 text-blue-605 dark:text-blue-400 shadow-sm border border-slate-100 dark:border-slate-85%'
                 : 'text-slate-500 dark:text-slate-400 hover:text-slate-85%'
             }`}
             id="nav-explore-btn"
@@ -104,7 +104,7 @@ export default function Header({
             onClick={() => setTab('my-events')}
             className={`px-4 py-1.5 rounded-xl text-xs font-semibold tracking-wide transition-all ${
               currentTab === 'my-events'
-                ? 'bg-white dark:bg-slate-900 text-indigo-605 dark:text-indigo-400 shadow-sm border border-slate-100 dark:border-slate-85%'
+                ? 'bg-white dark:bg-slate-900 text-blue-605 dark:text-blue-400 shadow-sm border border-slate-100 dark:border-slate-85%'
                 : 'text-slate-500 dark:text-slate-400 hover:text-slate-85%'
             }`}
             id="nav-my-events-btn"
@@ -116,7 +116,7 @@ export default function Header({
             onClick={() => setTab('create')}
             className={`px-4 py-1.5 rounded-xl text-xs font-semibold tracking-wide transition-all flex items-center space-x-1.5 ${
               currentTab === 'create'
-                ? 'bg-white dark:bg-slate-900 text-indigo-605 dark:text-indigo-400 shadow-sm border border-slate-100 dark:border-slate-85%'
+                ? 'bg-white dark:bg-slate-900 text-blue-605 dark:text-blue-400 shadow-sm border border-slate-100 dark:border-slate-85%'
                 : 'text-slate-500 dark:text-slate-400 hover:text-slate-85%'
             }`}
             id="nav-host-btn"
@@ -133,12 +133,12 @@ export default function Header({
               onClick={() => setTab('profile')}
               className={`flex items-center space-x-2 pl-2 pr-3.5 py-1.5 rounded-xl border transition-all active:scale-95 ${
                 currentTab === 'profile'
-                  ? 'border-indigo-600 bg-indigo-50/15 text-indigo-600 dark:text-indigo-400'
+                  ? 'border-blue-600 bg-blue-50/15 text-blue-600 dark:text-blue-400'
                   : 'border-slate-200 dark:border-slate-850 bg-slate-50 dark:bg-slate-900 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 text-slate-700 dark:text-slate-350'
               }`}
               id="profile-nav-btn"
             >
-              <div className="w-6 h-6 rounded-full overflow-hidden bg-slate-250 dark:bg-slate-800 ring-2 ring-indigo-500/10">
+              <div className="w-6 h-6 rounded-full overflow-hidden bg-slate-250 dark:bg-slate-800 ring-2 ring-blue-500/10">
                 {userProfile?.avatar_url ? (
                   <img src={userProfile.avatar_url} alt="Profile" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 ) : (

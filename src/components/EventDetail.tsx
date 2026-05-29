@@ -293,7 +293,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
 
               {/* Host representation display */}
               <div className="flex items-center space-x-3.5 bg-slate-50 dark:bg-slate-950/30 p-4 rounded-2xl border border-slate-100 dark:border-slate-850">
-                <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 overflow-hidden shrink-0 ring-2 ring-indigo-50/20">
+                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 overflow-hidden shrink-0 ring-2 ring-blue-50/20">
                   {hostProfile?.avatar_url ? (
                     <img src={hostProfile.avatar_url} alt={hostProfile.full_name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   ) : (
@@ -301,7 +301,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
                   )}
                 </div>
                 <div>
-                  <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider block">
+                  <span className="text-[10px] text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider block">
                     Hosted By
                   </span>
                   <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
@@ -330,7 +330,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
           <div className="bg-white dark:bg-slate-900 border border-slate-150 dark:border-slate-800 rounded-3xl p-6 md:p-8 space-y-6 shadow-sm">
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-85% pb-4">
               <div className="flex items-center space-x-2.5">
-                <div className="p-2 bg-indigo-50 dark:bg-indigo-950/45 text-indigo-600 dark:text-indigo-400 rounded-xl">
+                <div className="p-2 bg-blue-50 dark:bg-blue-950/45 text-blue-600 dark:text-blue-400 rounded-xl">
                   <MessageSquare className="w-4 h-4" />
                 </div>
                 <h3 className="font-display font-bold text-base text-slate-900 dark:text-slate-100">
@@ -357,7 +357,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
                       key={comment.id} 
                       className={`flex items-start space-x-3 p-3 rounded-2xl group transition-all duration-200 ${
                         isOwnComment 
-                          ? 'bg-indigo-50/20 dark:bg-indigo-950/10 border border-indigo-100/30' 
+                          ? 'bg-blue-50/20 dark:bg-blue-950/10 border border-blue-100/30' 
                           : 'hover:bg-slate-50/50 dark:hover:bg-slate-850/20'
                       }`}
                     >
@@ -424,7 +424,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
                 disabled={!user}
                 value={commentInput}
                 onChange={(e) => setCommentInput(e.target.value)}
-                className="flex-1 px-4 py-2.5 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder-slate-400 text-xs rounded-xl border border-slate-200 dark:border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none disabled:bg-slate-100/50 disabled:dark:bg-slate-950/20 disabled:cursor-not-allowed disabled:text-slate-400"
+                className="flex-1 px-4 py-2.5 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder-slate-400 text-xs rounded-xl border border-slate-200 dark:border-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none disabled:bg-slate-100/50 disabled:dark:bg-slate-950/20 disabled:cursor-not-allowed disabled:text-slate-400"
                 id="comment-input-field"
               />
               <button
@@ -443,12 +443,12 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
             </form>
 
             {!user && (
-              <div className="p-3 bg-indigo-50/40 dark:bg-indigo-950/20 border border-indigo-100/40 dark:border-indigo-900/40 rounded-xl flex items-center justify-between">
-                <span className="text-xs text-indigo-700 dark:text-indigo-300 font-medium">Want to post a message? Join now.</span>
+              <div className="p-3 bg-blue-50/40 dark:bg-blue-950/20 border border-blue-100/40 dark:border-blue-900/40 rounded-xl flex items-center justify-between">
+                <span className="text-xs text-blue-700 dark:text-blue-300 font-medium">Want to post a message? Join now.</span>
                 <button
                   type="button"
                   onClick={onAuthTrigger}
-                  className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-bold rounded-lg transition-all"
+                  className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-[10px] font-bold rounded-lg transition-all"
                 >
                   Sign In Instantly
                 </button>
@@ -466,7 +466,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
             <div>
               <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-2">Schedule</p>
               <div className="flex items-start space-x-3 text-slate-700 dark:text-slate-300">
-                <Calendar className="w-5 h-5 text-indigo-600 mt-0.5 shrink-0" />
+                <Calendar className="w-5 h-5 text-blue-600 mt-0.5 shrink-0" />
                 <div>
                   <p className="text-xs font-semibold text-slate-900 dark:text-slate-100">{dateFormatted}</p>
                   <p className="text-[11px] text-slate-500 mt-0.5 flex items-center gap-1">
@@ -479,7 +479,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
             <div className="border-t border-slate-100 dark:border-slate-800 pt-4">
               <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-2">Venue Location</p>
               <div className="flex items-start space-x-3 text-slate-700 dark:text-slate-300">
-                <MapPin className="w-5 h-5 text-indigo-600 mt-0.5 shrink-0" />
+                <MapPin className="w-5 h-5 text-blue-600 mt-0.5 shrink-0" />
                 <div>
                   <p className="text-xs font-semibold text-slate-900 dark:text-slate-100 leading-snug">{event.location}</p>
                 </div>
@@ -501,7 +501,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
           {/* RSVP SUBMISSION MECHANISM */}
           <div className="bg-white dark:bg-slate-900 border border-slate-150 dark:border-slate-800 rounded-3xl p-5 md:p-6 shadow-sm space-y-5" id="rsvp-registration-card">
             <div className="flex items-center space-x-2">
-              <Users className="w-5 h-5 text-indigo-600" />
+              <Users className="w-5 h-5 text-blue-600" />
               <h3 className="font-display font-bold text-base text-slate-900 dark:text-slate-100">
                 Registration / RSVP
               </h3>
@@ -558,7 +558,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
                 <button
                   type="submit"
                   disabled={rsvpLoading}
-                  className="w-full py-2.5 bg-indigo-650 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold tracking-wide transition-all active:scale-97 flex items-center justify-center space-x-1.5"
+                  className="w-full py-2.5 bg-blue-650 hover:bg-blue-700 text-white rounded-xl text-xs font-semibold tracking-wide transition-all active:scale-97 flex items-center justify-center space-x-1.5"
                   id="submit-rsvp-btn"
                 >
                   {rsvpLoading ? (
@@ -593,7 +593,7 @@ export default function EventDetail({ event, user, userProfile, onGoBack, onAuth
                         className="flex flex-col items-center group relative cursor-help"
                         title={`${attendee.name} (${attendee.email})`}
                       >
-                        <div className="w-8.5 h-8.5 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-indigo-600/15 flex items-center justify-center font-bold text-xs text-indigo-700 dark:text-indigo-400">
+                        <div className="w-8.5 h-8.5 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-blue-600/15 flex items-center justify-center font-bold text-xs text-blue-700 dark:text-blue-400">
                           {initials}
                         </div>
                         <span className="text-[8px] text-slate-500 dark:text-slate-400 mt-1 truncate max-w-[50px] font-medium text-center">

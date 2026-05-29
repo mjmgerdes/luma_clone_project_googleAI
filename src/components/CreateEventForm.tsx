@@ -96,7 +96,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/65 to-black/10 flex items-end p-6">
           <div className="flex items-center space-x-2">
-            <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
             <h2 className="font-display text-2xl font-bold text-white tracking-tight drop-shadow-sm">
               Design a New Gathering
             </h2>
@@ -124,7 +124,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
             placeholder="e.g., Parisian Sunset Wine Tasting & Networking"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm font-semibold focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm font-semibold focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             id="event-title-input"
           />
         </div>
@@ -142,7 +142,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
                 required
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 id="event-date-input"
               />
             </div>
@@ -160,7 +160,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
                 placeholder="e.g., 18:00 - 20:30"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 id="event-time-input"
               />
             </div>
@@ -178,7 +178,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
                 min="1"
                 value={maxCapacity}
                 onChange={(e) => setMaxCapacity(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs font-semibold focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 id="event-capacity-input"
               />
             </div>
@@ -198,7 +198,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
               placeholder="e.g., Studio 4B, 120 Champs-Élysées, Paris, France"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm font-semibold focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm font-semibold focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               id="event-location-input"
             />
           </div>
@@ -217,7 +217,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
               placeholder="Write a welcoming description, rules, dress codes, or details about the food and drinks you will serve."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               id="event-description-input"
             />
           </div>
@@ -238,7 +238,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
                 onClick={() => setImageUrl(curPreset.url)}
                 className={`group relative h-20 rounded-xl overflow-hidden border-2 text-left transition-all hover:scale-103 ${
                   imageUrl === curPreset.url 
-                    ? 'border-indigo-600 ring-4 ring-indigo-500/10' 
+                    ? 'border-blue-600 ring-4 ring-blue-500/10' 
                     : 'border-slate-200 dark:border-slate-800'
                 }`}
               >
@@ -255,7 +255,7 @@ export default function CreateEventForm({ user, onEventCreated, onCancel }: Crea
             placeholder="Or type/paste any custom Unsplash or image web URL here"
             value={imageUrl}
             onChange={(e) => setImageUrl(e.target.value)}
-            className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+            className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-xs focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
             id="custom-event-image-url-input"
           />
         </div>

@@ -49,7 +49,7 @@ export default function EventCard({ event, rsvpsCount, creatorProfile, onClick }
         
         {/* Date Stamp overlay (Luma Signature style) */}
         <div className="absolute top-3 left-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md rounded-xl p-2.5 flex flex-col items-center justify-center min-w-[50px] shadow-sm border border-slate-100 dark:border-slate-800">
-          <span className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 tracking-wider">
+          <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 tracking-wider">
             {month}
           </span>
           <span className="text-lg font-black text-slate-800 dark:text-slate-100 leading-none mt-0.5">
@@ -74,7 +74,7 @@ export default function EventCard({ event, rsvpsCount, creatorProfile, onClick }
             <span>{weekday}, {event.time}</span>
           </div>
 
-          <h3 className="font-display font-medium text-[15px] group-hover:text-indigo-600 dark:group-hover:text-indigo-400 text-slate-900 dark:text-slate-100 tracking-tight leading-snug line-clamp-2 min-h-[44px]">
+          <h3 className="font-display font-medium text-[15px] group-hover:text-blue-600 dark:group-hover:text-blue-400 text-slate-900 dark:text-slate-100 tracking-tight leading-snug line-clamp-2 min-h-[44px]">
             {event.title}
           </h3>
 

@@ -210,15 +210,15 @@ create or replace trigger on_auth_user_created
     <div className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden transition-all duration-300 shadow-md mb-8" id="sql-schema-guide-box">
       
       {/* 1. Header Section */}
-      <div className="border-b border-rose-500/10 bg-gradient-to-r from-indigo-50/50 via-slate-50/50 to-white dark:from-indigo-950/20 dark:via-slate-900/40 dark:to-slate-950 px-6 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="border-b border-rose-500/10 bg-gradient-to-r from-blue-50/50 via-slate-50/50 to-white dark:from-blue-950/20 dark:via-slate-900/40 dark:to-slate-950 px-6 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center space-x-3.5">
-          <div className="p-2.5 bg-indigo-100 dark:bg-indigo-950/70 rounded-2xl text-indigo-600 dark:text-indigo-400">
+          <div className="p-2.5 bg-blue-100 dark:bg-blue-950/70 rounded-2xl text-blue-600 dark:text-blue-400">
             <Database className="w-6 h-6 animate-pulse" id="sql-db-icon" />
           </div>
           <div>
             <h3 className="font-display font-bold text-lg text-slate-900 dark:text-slate-100 flex items-center gap-2">
               Supabase Automated Table Setup
-              <span className="text-[10px] bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 px-2.5 py-0.5 rounded-full font-mono uppercase tracking-wider font-extrabold">
+              <span className="text-[10px] bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2.5 py-0.5 rounded-full font-mono uppercase tracking-wider font-extrabold">
                 Developer Panel
               </span>
             </h3>
@@ -248,7 +248,7 @@ create or replace trigger on_auth_user_created
                   How does it work?
                 </p>
                 <p className="mt-0.5 leading-relaxed">
-                  Provide your Postgres Database Connection URL. The backend Node.js engine will connect via direct tcp/pg client, compile the needed database scripts (<code className="font-mono text-indigo-500">profiles</code>, <code className="font-mono text-indigo-500">events</code>, <code className="font-mono text-indigo-500">rsvps</code>, <code className="font-mono text-indigo-500">comments</code> tables, and auth creation triggers) and activate real-time syncing.
+                  Provide your Postgres Database Connection URL. The backend Node.js engine will connect via direct tcp/pg client, compile the needed database scripts (<code className="font-mono text-blue-500">profiles</code>, <code className="font-mono text-blue-500">events</code>, <code className="font-mono text-blue-500">rsvps</code>, <code className="font-mono text-blue-500">comments</code> tables, and auth creation triggers) and activate real-time syncing.
                 </p>
                 <p className="mt-1 text-[11px] text-amber-500 flex items-center gap-1 font-mono">
                   🛡️ Secure: Your Connection URL never leaves our secure server-side container.
@@ -268,7 +268,7 @@ create or replace trigger on_auth_user_created
                   value={connectionString}
                   onChange={(e) => setConnectionString(e.target.value)}
                   disabled={migrating}
-                  className="w-full px-4 py-3 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-mono placeholder-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 text-slate-800 dark:text-slate-100 transition-colors"
+                  className="w-full px-4 py-3 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-mono placeholder-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-slate-800 dark:text-slate-100 transition-colors"
                 />
               </div>
 
@@ -276,7 +276,7 @@ create or replace trigger on_auth_user_created
                 <button
                   type="submit"
                   disabled={migrating}
-                  className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-600/50 text-white rounded-xl text-xs font-bold tracking-wide uppercase shadow-sm transition-all flex items-center space-x-2 shrink-0 self-start"
+                  className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white rounded-xl text-xs font-bold tracking-wide uppercase shadow-sm transition-all flex items-center space-x-2 shrink-0 self-start"
                   id="btn-trigger-schema-install"
                 >
                   {migrating ? (
@@ -340,14 +340,14 @@ create or replace trigger on_auth_user_created
         <section className="space-y-3" id="manual-sql-editor-section">
           <div className="flex items-center justify-between text-slate-800 dark:text-slate-200">
             <div className="flex items-center space-x-2">
-              <FileText className="w-4 h-4 text-indigo-400 shrink-0" />
+              <FileText className="w-4 h-4 text-blue-400 shrink-0" />
               <h4 className="font-display font-extrabold text-sm tracking-wide uppercase">
                 Option B: Manual Copy-Paste Schema Script
               </h4>
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-xs text-indigo-500 hover:text-indigo-600 font-semibold flex items-center gap-1"
+              className="text-xs text-blue-500 hover:text-blue-600 font-semibold flex items-center gap-1"
             >
               {isOpen ? 'Collapse Code' : 'Expand Code'}
               {isOpen ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -359,7 +359,7 @@ create or replace trigger on_auth_user_created
               <div className="text-xs text-slate-500 dark:text-slate-400 space-y-1 bg-slate-50/50 dark:bg-slate-950/20 p-4 border border-slate-200 dark:border-slate-850 rounded-2xl">
                 <p>If you prefer using the Supabase SQL editor manual command interface:</p>
                 <ol className="list-decimal list-inside space-y-1 pl-1 text-[11px] pt-1 leading-normal">
-                  <li>Go to your <a href="https://supabase.com" target="_blank" rel="noopener noreferrer" className="text-indigo-500 underline hover:text-indigo-600 font-semibold">Supabase Web Console</a></li>
+                  <li>Go to your <a href="https://supabase.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-600 font-semibold">Supabase Web Console</a></li>
                   <li>Click on <b>SQL Editor</b> (the terminal console icon in the left sidebar)</li>
                   <li>Click <b>New Query</b>, paste the code snippet below, and hit <b>Run</b> at the bottom right.</li>
                 </ol>

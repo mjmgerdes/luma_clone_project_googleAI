@@ -147,7 +147,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
 
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center p-3 bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 rounded-2xl mb-3">
+          <div className="inline-flex items-center justify-center p-3 bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 rounded-2xl mb-3">
             <Sparkles className="w-6 h-6 animate-pulse" />
           </div>
           <h2 className="font-display text-2xl font-bold text-slate-900 dark:text-slate-100" id="auth-modal-title">
@@ -188,7 +188,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
                   placeholder="Taylor Smith"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   id="auth-fullName-input"
                 />
               </div>
@@ -207,7 +207,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
                 placeholder="taylor@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 id="auth-email-input"
               />
             </div>
@@ -225,7 +225,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 id="auth-password-input"
               />
               <button
@@ -267,10 +267,10 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
         <button
           onClick={handleDemoSignIn}
           disabled={loading}
-          className="w-full py-2.5 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/40 dark:hover:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 rounded-xl text-sm font-semibold transition-all active:scale-98 flex items-center justify-center space-x-2 border border-indigo-100/50 dark:border-indigo-900/50"
+          className="w-full py-2.5 bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-950/60 text-blue-600 dark:text-blue-400 rounded-xl text-sm font-semibold transition-all active:scale-98 flex items-center justify-center space-x-2 border border-blue-100/50 dark:border-blue-900/50"
           id="demo-guest-login-btn"
         >
-          <Sparkles className="w-4 h-4 text-indigo-500" />
+          <Sparkles className="w-4 h-4 text-blue-500" />
           <span>Quick Guest Login (Demo Mode)</span>
         </button>
 
@@ -282,7 +282,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
               <button 
                 type="button" 
                 onClick={() => { setIsSignUp(false); setErrorMsg(null); }}
-                className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
+                className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
               >
                 Log In
               </button>
@@ -293,7 +293,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
               <button 
                 type="button" 
                 onClick={() => { setIsSignUp(true); setErrorMsg(null); }}
-                className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
+                className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
               >
                 Create Account
               </button>

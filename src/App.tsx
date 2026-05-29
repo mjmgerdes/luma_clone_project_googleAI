@@ -285,13 +285,13 @@ export default function App() {
           <div className="space-y-8" id="view-explore-calendar">
             
             {/* HEROS SECTOR */}
-            <div className="relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-85% p-6 md:p-12 text-white flex flex-col md:flex-row justify-between items-center gap-8 shadow-sm">
+            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 border border-blue-900/40 p-6 md:p-12 text-white flex flex-col md:flex-row justify-between items-center gap-8 shadow-sm">
               <div className="absolute inset-0 opacity-15">
                 <div className="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
               </div>
               
               <div className="space-y-4 md:max-w-xl z-10 text-center md:text-left">
-                <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-white/10 rounded-full text-xs font-bold font-mono tracking-widest text-indigo-300 uppercase">
+                <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-white/10 rounded-full text-xs font-bold font-mono tracking-widest text-blue-300 uppercase">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>Elite Event Experience</span>
                 </div>
@@ -310,7 +310,7 @@ export default function App() {
                     placeholder="Search title, description or location..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-950/70 border border-slate-800 rounded-xl text-xs placeholder-slate-500 focus:border-indigo-500 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-950/70 border border-slate-800 rounded-xl text-xs placeholder-slate-500 focus:border-blue-500 focus:outline-none"
                     id="search-input-box"
                   />
                 </div>
@@ -319,7 +319,7 @@ export default function App() {
               {/* Dynamic visual badge for database configuration */}
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 max-w-xs text-center z-10 shrink-0 self-stretch flex flex-col justify-between" id="seeding-instructions-banner">
                 <div>
-                  <h4 className="font-display font-semibold text-xs text-indigo-300 uppercase tracking-widest flex items-center justify-center gap-1.5">
+                  <h4 className="font-display font-semibold text-xs text-blue-300 uppercase tracking-widest flex items-center justify-center gap-1.5">
                     <Database className="w-4 h-4" />
                     Supabase Project Hook
                   </h4>
@@ -336,7 +336,7 @@ export default function App() {
                     <button
                       onClick={handleSeedPresetEvents}
                       disabled={seedingLoading}
-                      className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-600/30 text-white rounded-lg text-[10px] font-extrabold tracking-widest uppercase transition-all flex items-center justify-center space-x-1"
+                      className="w-full py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/30 text-white rounded-lg text-[10px] font-extrabold tracking-widest uppercase transition-all flex items-center justify-center space-x-1"
                       id="seed-meta-btn"
                     >
                       {seedingLoading ? (
@@ -348,7 +348,7 @@ export default function App() {
                         <span>Seed Real Demo Events</span>
                       )}
                     </button>
-                    {seedingMessage && <p className="text-[9px] text-indigo-300 font-mono italic leading-tight">{seedingMessage}</p>}
+                    {seedingMessage && <p className="text-[9px] text-blue-300 font-mono italic leading-tight">{seedingMessage}</p>}
                   </div>
                 )}
               </div>
@@ -362,7 +362,7 @@ export default function App() {
               <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-900 pb-3">
                 <h2 className="font-display text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
                   Elite Gatherings Call-board
-                  <span className="text-xs bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold px-2.5 py-0.5 rounded-full font-sans">
+                  <span className="text-xs bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold px-2.5 py-0.5 rounded-full font-sans">
                     {filteredEvents.length} list
                   </span>
                 </h2>
@@ -392,7 +392,7 @@ export default function App() {
                   <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">No gatherings matched your search filter.</p>
                   <button 
                     onClick={() => setSearchQuery('')}
-                    className="text-xs text-indigo-650 hover:underline mt-2 font-bold"
+                    className="text-xs text-blue-650 hover:underline mt-2 font-bold"
                   >
                     Clear Filter
                   </button>
@@ -443,14 +443,14 @@ export default function App() {
               />
             ) : (
               <div className="text-center py-16 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 max-w-md mx-auto shadow-sm">
-                <PlusCircle className="w-12 h-12 text-indigo-600 mx-auto mb-4 animate-bounce" />
+                <PlusCircle className="w-12 h-12 text-blue-600 mx-auto mb-4 animate-bounce" />
                 <h3 className="font-display font-bold text-lg text-slate-900 dark:text-slate-100">Authorize Guest to Host</h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 mb-6">
                   You must be logged in to create and host gatherings on this event platform. Click below to sign up securely!
                 </p>
                 <button
                   onClick={() => setShowAuthModal(true)}
-                  className="px-6 py-2.5 bg-indigo-600 text-white rounded-xl text-xs font-semibold"
+                  className="px-6 py-2.5 bg-blue-600 text-white rounded-xl text-xs font-semibold"
                 >
                   Log In or Register
                 </button>
@@ -472,14 +472,14 @@ export default function App() {
               />
             ) : (
               <div className="text-center py-16 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 max-w-md mx-auto shadow-sm">
-                <Users className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
+                <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-display font-medium text-lg text-slate-900">Manage Your Profile</h3>
                 <p className="text-xs text-slate-500 mt-2 mb-6">
                   Sign in using Supabase to personalize your name, upload avatars and manage custom listings.
                 </p>
                 <button
                   onClick={() => setShowAuthModal(true)}
-                  className="px-6 py-2.5 bg-indigo-650 text-white rounded-xl text-xs font-semibold"
+                  className="px-6 py-2.5 bg-blue-650 text-white rounded-xl text-xs font-semibold"
                 >
                   Sign In Now
                 </button>
@@ -505,7 +505,7 @@ export default function App() {
                 <p className="font-medium">The selected event could not be retrieved from the Supabase database.</p>
                 <button 
                   onClick={() => setTab('explore')} 
-                  className="text-xs font-bold text-indigo-600 uppercase tracking-widest mt-4 underline"
+                  className="text-xs font-bold text-blue-600 uppercase tracking-widest mt-4 underline"
                 >
                   Return to Explore
                 </button>
@@ -522,7 +522,7 @@ export default function App() {
           onClick={() => { setTab('explore'); setSelectedEventId(null); }}
           className={`flex flex-col items-center gap-1 text-[10px] font-bold ${
             tab === 'explore' || tab === 'event-detail'
-              ? 'text-indigo-650 dark:text-indigo-400'
+              ? 'text-blue-650 dark:text-blue-400'
               : 'text-slate-400 dark:text-slate-500'
           }`}
           id="mobile-explore-btn"
@@ -535,7 +535,7 @@ export default function App() {
           onClick={() => { setTab('my-events'); setSelectedEventId(null); }}
           className={`flex flex-col items-center gap-1 text-[10px] font-bold ${
             tab === 'my-events'
-              ? 'text-indigo-655 dark:text-indigo-400'
+              ? 'text-blue-655 dark:text-blue-400'
               : 'text-slate-400 dark:text-slate-500'
           }`}
           id="mobile-my-btn"
@@ -548,7 +548,7 @@ export default function App() {
           onClick={() => { setTab('create'); setSelectedEventId(null); }}
           className={`flex flex-col items-center gap-1 text-[10px] font-bold ${
             tab === 'create'
-              ? 'text-indigo-655 dark:text-indigo-400'
+              ? 'text-blue-655 dark:text-blue-400'
               : 'text-slate-400 dark:text-slate-500'
           }`}
           id="mobile-host-btn"
@@ -561,7 +561,7 @@ export default function App() {
           onClick={() => { setTab('profile'); setSelectedEventId(null); }}
           className={`flex flex-col items-center gap-1 text-[10px] font-bold ${
             tab === 'profile'
-              ? 'text-indigo-655 dark:text-indigo-400'
+              ? 'text-blue-655 dark:text-blue-400'
               : 'text-slate-400 dark:text-slate-500'
           }`}
           id="mobile-profile-btn"

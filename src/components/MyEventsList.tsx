@@ -29,7 +29,7 @@ export default function MyEventsList({
   if (!user) {
     return (
       <div className="text-center py-12 px-6 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-lg mx-auto">
-        <Sparkles className="w-10 h-10 text-indigo-500 mx-auto mb-3 animate-pulse" />
+        <Sparkles className="w-10 h-10 text-blue-500 mx-auto mb-3 animate-pulse" />
         <h3 className="font-display font-bold text-lg text-slate-800 dark:text-slate-100">
           Unlock My Events
         </h3>
@@ -66,7 +66,7 @@ export default function MyEventsList({
           onClick={() => setActiveTab('rsvp')}
           className={`pb-3.5 px-6 font-display text-sm font-semibold transition-all flex items-center space-x-2 border-b-2 -mb-0.5 ${
             activeTab === 'rsvp'
-              ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
+              ? 'border-blue-600 text-blue-600 dark:text-blue-400'
               : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
           }`}
           id="rsvp-tab-btn"
@@ -79,7 +79,7 @@ export default function MyEventsList({
           onClick={() => setActiveTab('host')}
           className={`pb-3.5 px-6 font-display text-sm font-semibold transition-all flex items-center space-x-2 border-b-2 -mb-0.5 ${
             activeTab === 'host'
-              ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400'
+              ? 'border-blue-600 text-blue-600 dark:text-blue-400'
               : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
           }`}
           id="host-tab-btn"
